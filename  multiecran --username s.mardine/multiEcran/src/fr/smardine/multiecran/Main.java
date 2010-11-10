@@ -3,7 +3,6 @@ package fr.smardine.multiecran;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
@@ -15,6 +14,7 @@ public class Main extends Activity {
 	int DENSITY_HIGH=240,DENSITY_MEDIUM=160,DENSITY_LOW=120;
 	boolean portrait=false,paysage=false;
 	// The gesture threshold expressed in dip
+	@SuppressWarnings("unused")
 	private static final float GESTURE_THRESHOLD_DIP = 16.0f;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,8 @@ public class Main extends Activity {
         int hauteur= display.getHeight();// Hauteur de l'ecran environ 420
       	int largeur=  display.getWidth();// Largeur de l'ecran environ 300
      
-      	int rotation = display.getOrientation();
+      	@SuppressWarnings("unused")
+		int rotation = display.getOrientation();
       	//on determine si on est sur un ecran "landscape" (paysage)
       	if (hauteur<largeur){
       		portrait = false;
