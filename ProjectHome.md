@@ -1,0 +1,1 @@
+en fonction des parametres density, height, weight, on affiche tele ou tel layout
